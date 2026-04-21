@@ -1,0 +1,10 @@
+
+body, button, input, select, textarea { font-family: 'Manrope', sans-serif !important; }
+.hdr-t,.clock-time,.clock-secs,.countdown-time,.clock-mini-value.serif,.clock-next-main,.clock-fast-v .clock-fast-time-main,.pqs-prayer-name,.splash-title,.kpi-val,.dhikr-ar-big,.dhikr-ring-count,.dhikr-tap-btn,.fast-status,.hifz-stat-val,.sqd-entry-d,.qr-big-pages,.qr-slash-goal,.qr-ring-pct,.big-num,.ps-num,.hd-ar,.hd-tr,.modal-t,.cal-sel-date,.cal-no-acts,.empty,.hdr-chip-num {
+  font-family: 'Playfair Display', serif !important;
+}
+.clock-time,.big-num{font-weight:700 !important;letter-spacing:-.05em !important;}
+.countdown-time,.clock-next-main,.kpi-val,.qr-big-pages,.ps-num,.modal-t,.hdr-t{font-weight:700 !important;}
+#hdr-app-title{white-space:nowrap;display:block;max-width:100%;overflow:visible;text-overflow:clip;font-size:clamp(1.02rem,5.6vw,1.72rem)!important;line-height:1.08;letter-spacing:-.01em;padding-right:0.02em;word-break:keep-all;font-weight:800}
+.pqs-prayer-name,.clock-mini-value.serif,.clock-fast-v .clock-fast-time-main,.hd-ar,.hd-tr{font-weight:600 !important;}
+.nb,.dhikr-tab,.hd-view-tab,.hd-filter-chip,.sbtn,.vb-act-btn,.clock-mini-chip,.clock-mini-label,.clock-fast-k,.hdr-sheet-today-btn,.hdr-date-close,.hdr-sheet-jump input,.finp,.pt-inp,.sunnah-add-btn,.hifz-tab{font-weight:700 !important;letter-spacing:.05em !important;}

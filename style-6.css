@@ -1,0 +1,6 @@
+
+.svg-emoji,.svg-emoji-inline{display:inline-flex;align-items:center;justify-content:center;vertical-align:-0.14em;color:currentColor;line-height:1;flex-shrink:0}
+.svg-emoji svg,.svg-emoji-inline svg{width:1em;height:1em;display:block;stroke:currentColor;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.svg-emoji.fill svg,.svg-emoji-inline.fill svg{fill:currentColor;stroke:none}
+.ob-step-icon .svg-emoji,.pm-action-icon .svg-emoji,.scard-icon .svg-emoji,.sr-icon .svg-emoji,.ob-goal-label .svg-emoji,.feat-badge .svg-emoji{font-size:1em}
+.icon-replaced{letter-spacing:normal}

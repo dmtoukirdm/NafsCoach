@@ -1,0 +1,20 @@
+
+/* Dhikr tabs: single row horizontal swipe */
+.dhikr-tabs{
+  display:flex !important;
+  flex-wrap:nowrap !important;
+  overflow-x:auto !important;
+  overflow-y:hidden !important;
+  -webkit-overflow-scrolling:touch !important;
+  scroll-snap-type:x proximity;
+  gap:10px !important;
+  padding:0 14px 12px !important;
+  white-space:nowrap;
+}
+.dhikr-tabs > *{
+  flex:0 0 auto !important;
+  scroll-snap-align:start;
+}
+.dhikr-tab{
+  white-space:nowrap !important;
+}

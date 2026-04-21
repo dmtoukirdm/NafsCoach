@@ -1,0 +1,327 @@
+
+/* ── Explore Page Styles ── */
+.exp-page { padding: 0 0 32px; }
+
+/* Page header */
+.exp-header {
+  padding: 22px 18px 16px;
+  position: relative;
+}
+.exp-header-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.625rem;
+  font-weight: 300;
+  color: var(--text);
+  letter-spacing: -.01em;
+  line-height: 1;
+  margin-bottom: 3px;
+}
+.exp-header-title em {
+  color: var(--gold);
+  font-style: normal;
+}
+.exp-header-sub {
+  font-size: 0.5rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--t3);
+  font-weight: 600;
+}
+.exp-header-deco {
+  position: absolute;
+  right: 18px;
+  top: 18px;
+  opacity: .07;
+  pointer-events: none;
+}
+
+/* Section label */
+.exp-sec {
+  padding: 14px 18px 8px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+.exp-sec-label {
+  font-size: 0.4375rem;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 700;
+  opacity: .7;
+  white-space: nowrap;
+}
+.exp-sec-line {
+  height: 1px;
+  flex: 1;
+  background: linear-gradient(90deg, rgba(var(--accent-rgb),.18), transparent);
+}
+
+/* Hero duo cards */
+.exp-hero-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding: 0 14px;
+  margin-bottom: 10px;
+}
+.exp-hero-card {
+  border-radius: 20px;
+  padding: 20px 16px 18px;
+  background: var(--fb, rgba(255,255,255,.04));
+  border: 1px solid var(--fc, rgba(255,255,255,.08));
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: transform .22s cubic-bezier(.34,1.56,.64,1), box-shadow .22s, border-color .22s;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.exp-hero-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.22), transparent);
+}
+.exp-hero-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 0%, var(--fc, rgba(255,255,255,.05)) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity .22s;
+  pointer-events: none;
+}
+.exp-hero-card:hover::after { opacity: 1; }
+.exp-hero-card:active { transform: scale(.94); }
+.exp-hero-icon {
+  width: 40px; height: 40px;
+  border-radius: 13px;
+  display: flex; align-items: center; justify-content: center;
+  border: 1px solid var(--fc, rgba(255,255,255,.12));
+  background: var(--fb, rgba(255,255,255,.06));
+}
+.exp-hero-icon svg { width: 22px; height: 22px; }
+.exp-hero-name {
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--text);
+  margin-bottom: 2px;
+}
+.exp-hero-desc {
+  font-size: 0.4375rem;
+  color: var(--t3);
+  letter-spacing: .04em;
+  line-height: 1.5;
+}
+.exp-hero-arrow {
+  position: absolute;
+  right: 14px;
+  bottom: 16px;
+  opacity: .25;
+  transition: opacity .2s, transform .2s;
+}
+.exp-hero-card:hover .exp-hero-arrow { opacity: .6; transform: translateX(3px); }
+
+/* Sacred texts redesign */
+.exp-hero-row.exp-sacred-row {
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+.exp-sacred-card {
+  min-height: 176px;
+  padding: 18px 18px 18px;
+  gap: 0;
+  isolation: isolate;
+}
+.exp-sacred-card::after {
+  opacity: 1;
+  background:
+    radial-gradient(circle at 88% 16%, rgba(255,255,255,.14), transparent 18%),
+    radial-gradient(circle at 100% 0%, var(--fc, rgba(255,255,255,.10)) 0%, transparent 56%),
+    linear-gradient(135deg, rgba(255,255,255,.03), transparent 60%);
+}
+.exp-sacred-card .exp-hero-top {
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:14px;
+  position:relative;
+  z-index:1;
+}
+.exp-sacred-card .exp-hero-copy {
+  flex:1;
+  min-width:0;
+  padding-right:6px;
+}
+.exp-sacred-card .exp-hero-name {
+  font-size: .95rem;
+  letter-spacing: .14em;
+  margin-bottom: 8px;
+}
+.exp-sacred-card .exp-hero-desc {
+  font-size: .76rem;
+  line-height: 1.6;
+  max-width: 190px;
+  color: rgba(240,242,248,.78);
+}
+.exp-sacred-card .exp-hero-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.14);
+}
+.exp-sacred-card .exp-hero-icon svg { width: 24px; height: 24px; }
+.exp-sacred-art {
+  position:absolute;
+  right:-8px;
+  bottom:-10px;
+  width: 170px;
+  height: 170px;
+  opacity:.98;
+  pointer-events:none;
+  z-index:0;
+  filter: drop-shadow(0 18px 28px rgba(0,0,0,.18));
+}
+.exp-sacred-card .exp-hero-arrow {
+  right: 18px;
+  bottom: 18px;
+  opacity: .48;
+}
+.exp-sacred-chip-row {
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top: 16px;
+  position:relative;
+  z-index:1;
+}
+.exp-sacred-chip {
+  font-size:.63rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  padding:8px 10px;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,.08);
+  background:rgba(255,255,255,.05);
+  color:rgba(240,242,248,.82);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+body.theme-light .exp-sacred-chip {
+  background: rgba(255,255,255,.66);
+  color: rgba(20,24,34,.76);
+  border-color: rgba(0,0,0,.06);
+}
+@media (max-width: 380px) {
+  .exp-sacred-card { min-height: 166px; }
+  .exp-sacred-card .exp-hero-desc { max-width: 160px; font-size: .7rem; }
+  .exp-sacred-art { width: 150px; height: 150px; right: -14px; }
+}
+
+/* 3-col medium cards */
+.exp-mid-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  padding: 0 14px;
+  margin-bottom: 10px;
+}
+.exp-mid-card {
+  border-radius: 16px;
+  padding: 16px 10px 14px;
+  background: var(--fb, rgba(255,255,255,.04));
+  border: 1px solid var(--fc, rgba(255,255,255,.07));
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: transform .2s cubic-bezier(.34,1.56,.64,1), border-color .2s;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+}
+.exp-mid-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.14), transparent);
+}
+.exp-mid-card:active { transform: scale(.9); }
+.exp-mid-icon {
+  width: 32px; height: 32px;
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--fb, rgba(255,255,255,.05));
+  border: 1px solid var(--fc, rgba(255,255,255,.1));
+}
+.exp-mid-icon svg { width: 17px; height: 17px; }
+.exp-mid-name {
+  font-size: 0.4375rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--t2);
+}
+
+/* 4-col small tiles */
+.exp-grid-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 7px;
+  padding: 0 14px;
+  margin-bottom: 10px;
+}
+.exp-tile {
+  border-radius: 14px;
+  padding: 13px 6px 11px;
+  background: rgba(255,255,255,.03);
+  border: 1px solid rgba(255,255,255,.06);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: transform .18s cubic-bezier(.34,1.56,.64,1), background .18s, border-color .18s;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  text-align: center;
+}
+.exp-tile:active { transform: scale(.88); }
+.exp-tile-icon {
+  width: 22px; height: 22px;
+  display: flex; align-items: center; justify-content: center;
+}
+.exp-tile-icon svg { width: 100%; height: 100%; filter: drop-shadow(0 0 3px currentColor); }
+.exp-tile-lbl {
+  font-size: 0.3125rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--t3);
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+/* Light mode overrides */
+body.theme-light .exp-hero-card { background: rgba(255,255,255,.7); border-color: rgba(0,0,0,.07); }
+body.theme-light .exp-mid-card  { background: rgba(255,255,255,.6); border-color: rgba(0,0,0,.06); }
+body.theme-light .exp-tile       { background: rgba(255,255,255,.5); border-color: rgba(0,0,0,.06); }
+body.theme-light .exp-mid-name  { color: var(--t2); }
+body.theme-light .exp-tile-lbl  { color: var(--t3); }
